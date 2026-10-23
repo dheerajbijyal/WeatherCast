@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b1020">
+  <meta name="description" content="A calmer way to catch up with the weather. Explore your local forecast and prepare for a personal spoken briefing.">
+  <title>WeatherCast — Your weather, in your words</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../static/style.css">
+  <script src="../static/script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="site-header">
+    <div class="nav-shell">
+      <a class="brand" href="#overview" aria-label="WeatherCast home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 36 36" fill="none"><path d="M10.7 23.7a6.1 6.1 0 0 1-.1-12.2 8.3 8.3 0 0 1 15.7 2.2 5.1 5.1 0 0 1-.1 10H10.7Z" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><path d="m15.2 27.1-1.1 2.2m7.8-2.2-1.1 2.2" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><path d="M23.2 7.3V4.8m5.7 4.1 1.8-1.8M10.8 8.9 9 7.1" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </span>
+        <span>weather<span class="brand-light">cast</span></span>
+      </a>
+      <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="primary-navigation">
+        <span></span><span></span>
+      </button>
+      <nav class="primary-nav" id="primary-navigation" aria-label="Primary navigation">
+        <a class="nav-link active" href="#overview">Overview</a>
+        <a class="nav-link" href="#forecast">Forecast</a>
+        <a class="nav-link" href="#podcast">Weather podcast</a>
+        <a class="nav-link" href="#about">About</a>
+      </nav>
+      <a class="nav-action" href="#city-search">
+        <svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="8.8" cy="8.8" r="5.7"></circle><path d="m13 13 4 4"></path></svg>
+        <span>Find your city</span>
+      </a>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="hero section-wrap" id="overview" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="live-dot"></span> A fresh perspective, every day</div>
+        <h1 id="hero-title">Your weather.<br>Your world. <span>Your voice.</span></h1>
+        <p class="hero-description">The forecast, made personal. Get a clear picture of the day ahead and make room for a weather briefing that speaks your language.</p>
+        <form class="search-form" id="city-search" novalidate>
+          <label class="visually-hidden" for="city-input">Search for a city</label>
+          <svg class="search-icon" viewBox="0 0 20 20" aria-hidden="true"><circle cx="8.8" cy="8.8" r="5.7"></circle><path d="m13 13 4 4"></path></svg>
+          <input id="city-input" name="city" type="search" placeholder="Try a city, e.g. Copenhagen" autocomplete="address-level2" maxlength="80" aria-describedby="search-hint search-feedback">
+          <button class="button button-primary search-submit" type="submit">Get forecast <span aria-hidden="true">↗</span></button>
+        </form>
+        <div class="search-assist">
+          <span id="search-hint">Try a city anywhere in the world</span>
+          <button class="location-button" id="location-button" type="button">
+            <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M16.4 8.4c0 4.4-6.4 9-6.4 9s-6.4-4.6-6.4-9a6.4 6.4 0 1 1 12.8 0Z"></path><circle cx="10" cy="8.3" r="2.1"></circle></svg>
+            Use my location
+          </button>
+        </div>
+        <p class="form-feedback" id="search-feedback" role="status" aria-live="polite"></p>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+        <div class="sun-glow"></div>
+        <svg class="hero-cloud" viewBox="0 0 250 190" fill="none">
+          <path d="M61 129.5c-22.9 0-41.5-17.4-41.5-38.8 0-20.6 17.2-37.5 39-38.7 9-27.8 36.3-47.8 68.7-47.8 36.3 0 66.4 25.2 71.3 57.8 19.9 3.8 34.9 20.1 34.9 39.7 0 22.5-19.2 40.8-42.9 40.8H61Z" fill="url(#cloudFill)" stroke="rgba(255,255,255,.72)" stroke-width="2"/>
+          <path d="M88 145 75 174m62-29-13 29m62-29-13 29" stroke="#d3e8ff" stroke-width="8" stroke-linecap="round" opacity=".8"/>
+          <defs><linearGradient id="cloudFill" x1="30" y1="16" x2="198" y2="142" gradientUnits="userSpaceOnUse"><stop stop-color="#fff" stop-opacity=".96"/><stop offset="1" stop-color="#a9c5ee" stop-opacity=".72"/></linearGradient></defs>
+        </svg>
+        <div class="art-spark spark-one">✦</div><div class="art-spark spark-two">✧</div>
+        <div class="art-caption"><span class="caption-sun"></span><span>Make the day yours</span></div>
+      </div>
+      <div class="hero-bottom">
+        <div class="trust-note"><span class="trust-avatars"><i>W</i><i>☼</i><i>♫</i></span><span>A little more in tune with your day</span></div>
+        <span class="scroll-note">Scroll to explore <span aria-hidden="true">↓</span></span>
+      </div>
+    </section>
+
+    <section class="weather-section section-wrap" aria-labelledby="weather-heading">
+      <div class="section-heading weather-heading">
+        <div><div class="eyebrow section-eyebrow">Right here, right now</div><h2 id="weather-heading">Your local forecast</h2></div>
+        <span class="data-badge" id="data-status"><span class="status-dot"></span> Demo weather</span>
+      </div>
+      <article class="current-card glass-card" aria-label="Current weather">
+        <div class="weather-card-top">
+          <div>
+            <div class="location-line">
+              <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M16.4 8.4c0 4.4-6.4 9-6.4 9s-6.4-4.6-6.4-9a6.4 6.4 0 1 1 12.8 0Z"></path><circle cx="10" cy="8.3" r="2.1"></circle></svg>
+              <h3 id="weather-city">Seattle, United States</h3>
+            </div>
+            <p class="weather-date" id="weather-date">A lovely day to look up</p>
+          </div>
+          <span class="weather-period">LOCAL WEATHER</span>
+        </div>
+        <div class="current-main">
+          <div class="current-temp-wrap">
+            <div class="weather-symbol" id="weather-icon" aria-hidden="true">☀</div>
+            <div><p class="current-temp"><span id="weather-temp">18</span><sup>°</sup></p><p class="weather-condition" id="weather-condition">Partly cloudy</p></div>
+          </div>
+          <div class="feels-like"><span class="feels-icon" aria-hidden="true">≈</span><span>Feels like <strong id="weather-feels">17°C</strong></span></div>
+        </div>
+        <div class="weather-metrics">
+          <div class="metric"><span class="metric-icon humidity-icon" aria-hidden="true">◌</span><span class="metric-label">Humidity</span><strong class="metric-value" id="weather-humidity">64%</strong></div>
+          <div class="metric"><span class="metric-icon wind-icon" aria-hidden="true">↝</span><span class="metric-label">Wind</span><strong class="metric-value" id="weather-wind">12 km/h</strong></div>
+          <div class="metric"><span class="metric-icon pressure-icon" aria-hidden="true">◎</span><span class="metric-label">Pressure</span><strong class="metric-value" id="weather-pressure">1015 hPa</strong></div>
+          <div class="metric"><span class="metric-icon visibility-icon" aria-hidden="true">◉</span><span class="metric-label">Visibility</span><strong class="metric-value" id="weather-visibility">10 km</strong></div>
+        </div>
+        <div class="weather-card-foot"><span>Weather at a glance</span><span class="update-indicator"><span></span><span id="weather-updated">Demo conditions</span></span></div>
+      </article>
+    </section>
+
+    <section class="forecast-section section-wrap" id="forecast" aria-labelledby="forecast-heading">
+      <div class="section-heading">
+        <div><div class="eyebrow section-eyebrow">A little look ahead</div><h2 id="forecast-heading">The next few days</h2></div>
+        <p class="section-aside" id="forecast-caption">Five-day outlook · demo data</p>
+      </div>
+      <div class="forecast-grid" id="forecast-grid" aria-live="polite">
+        <article class="forecast-card"><span class="forecast-day">Today</span><span class="forecast-icon sunny" aria-hidden="true">☀</span><span class="forecast-condition">Mostly sunny</span><div class="forecast-range"><strong>20°</strong><span>12°</span></div></article>
+        <article class="forecast-card"><span class="forecast-day">Tue</span><span class="forecast-icon partly" aria-hidden="true">◐</span><span class="forecast-condition">Partly cloudy</span><div class="forecast-range"><strong>18°</strong><span>11°</span></div></article>
+        <article class="forecast-card"><span class="forecast-day">Wed</span><span class="forecast-icon rainy" aria-hidden="true">☂</span><span class="forecast-condition">Light rain</span><div class="forecast-range"><strong>16°</strong><span>10°</span></div></article>
+        <article class="forecast-card"><span class="forecast-day">Thu</span><span class="forecast-icon partly" aria-hidden="true">◐</span><span class="forecast-condition">Clouds & sun</span><div class="forecast-range"><strong>19°</strong><span>12°</span></div></article>
+        <article class="forecast-card"><span class="forecast-day">Fri</span><span class="forecast-icon sunny" aria-hidden="true">☀</span><span class="forecast-condition">Clear skies</span><div class="forecast-range"><strong>21°</strong><span>13°</span></div></article>
+      </div>
+    </section>
+
+    <section class="podcast-section section-wrap" id="podcast" aria-labelledby="podcast-heading">
+      <div class="podcast-intro">
+        <div class="eyebrow section-eyebrow"><span class="music-wave" aria-hidden="true"><i></i><i></i><i></i><i></i></span> Your forecast, with a voice</div>
+        <h2 id="podcast-heading">Your Personal<br>Weather <span>Briefing</span></h2>
+        <p>A thoughtful, easy-to-follow forecast made for your day. Choose a voice and language, then settle in for a more personal way to listen.</p>
+        <button class="button button-primary generate-button" id="generate-button" type="button">Generate weather podcast <span aria-hidden="true">↗</span></button>
+        <p class="podcast-feedback" id="podcast-feedback" role="status" aria-live="polite">Search for a city to create a briefing from its live weather. Playback uses your browser and does not create an MP3.</p>
+        <div class="podcast-promises"><span><span>✦</span> Made for your location</span><span><span>◉</span> In your own language</span></div>
+      </div>
+      <div class="player-card glass-card">
+        <div class="episode-art">
+          <div class="art-ring ring-large"></div><div class="art-ring ring-small"></div>
+          <span class="episode-art-kicker">WEATHERCAST ORIGINAL</span>
+          <span class="episode-art-sun" aria-hidden="true">☀</span>
+          <span class="episode-art-cloud" aria-hidden="true">☁</span>
+          <span class="episode-art-title">A brighter<br>kind of forecast.</span>
+          <span class="episode-art-footer">YOUR DAY, IN A FEW MINUTES</span>
+        </div>
+        <div class="player-info">
+          <div class="episode-heading"><div><span class="episode-label">YOUR NEXT BRIEFING</span><h3 id="episode-title">A moment with the weather</h3><p id="episode-city">Search a city to create a briefing</p></div><span class="episode-menu" aria-hidden="true">•••</span></div>
+          <details class="transcript-panel" id="transcript-panel" hidden>
+            <summary>Read briefing script</summary>
+            <p id="episode-transcript"></p>
+          </details>
+          <div class="player-controls">
+            <button class="player-button secondary" id="stop-button" type="button" aria-label="Stop audio" title="Stop audio" disabled>■</button>
+            <button class="player-button play-button" id="play-button" type="button" aria-label="Play audio" title="Play audio" disabled>▶</button>
+            <button class="player-button secondary" id="pause-button" type="button" aria-label="Pause audio" title="Pause audio" disabled>Ⅱ</button>
+            <span class="player-message" id="player-feedback" role="status" aria-live="polite">Generate a briefing to listen</span>
+          </div>
+          <p class="playback-note">Browser speech · no MP3 file is created</p>
+          <div class="player-options">
+            <label>Voice<select id="voice-select" aria-label="Speech voice"><option value="">Loading available voices…</option></select></label>
+            <label>Speed<select id="speed-select"><option value="0.85">0.85×</option><option value="1" selected>1×</option><option value="1.15">1.15×</option><option value="1.3">1.3×</option></select></label>
+            <label>Language<select id="language-select"><option value="en">English</option><option value="hi">हिन्दी · Hindi</option></select></label>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="insights-section section-wrap" aria-labelledby="insights-heading">
+      <div class="section-heading">
+        <div><div class="eyebrow section-eyebrow">The little details</div><h2 id="insights-heading">A few things to know</h2></div>
+        <span class="data-badge demo-insights"><span class="status-dot"></span> Demo insights</span>
+      </div>
+      <div class="insights-grid">
+        <article class="insight-card glass-card"><div class="insight-top"><span class="insight-symbol temperature-symbol">↗</span><span class="insight-caption">TEMPERATURE</span></div><p class="insight-value" id="insight-temperature">A gentle 18°</p><p class="insight-copy" id="insight-temperature-copy">Comfortable for getting out and about.</p><div class="mini-chart" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div></article>
+        <article class="insight-card glass-card"><div class="insight-top"><span class="insight-symbol rain-symbol">⌁</span><span class="insight-caption">CHANCE OF RAIN</span></div><p class="insight-value" id="insight-rain">A small chance</p><p class="insight-copy" id="insight-rain-copy">About 20% chance of rain today.</p><div class="rain-meter" aria-hidden="true"><span></span></div></article>
+        <article class="insight-card glass-card"><div class="insight-top"><span class="insight-symbol breeze-symbol">≈</span><span class="insight-caption">WIND CONDITIONS</span></div><p class="insight-value" id="insight-wind">Easy-breezy</p><p class="insight-copy" id="insight-wind-copy">A light 12 km/h breeze.</p><div class="wind-lines" aria-hidden="true"><i></i><i></i><i></i></div></article>
+        <article class="insight-card glass-card"><div class="insight-top"><span class="insight-symbol outdoors-symbol">✿</span><span class="insight-caption">OUTDOOR PLANS</span></div><p class="insight-value" id="insight-outdoors">Take the scenic route</p><p class="insight-copy" id="insight-outdoors-copy">A lovely day for a little fresh air.</p><div class="outdoor-decoration" aria-hidden="true"><span>☼</span><span>⌁</span><span>✳</span></div></article>
+      </div>
+      <p class="insights-note">Insights are illustrative and aren’t a substitute for official weather alerts.</p>
+    </section>
+
+    <section class="recent-section section-wrap" aria-labelledby="recent-heading">
+      <div class="section-heading">
+        <div><div class="eyebrow section-eyebrow">Listen again</div><h2 id="recent-heading">Your recent briefings</h2></div>
+        <span class="recent-count" id="recent-count">0 episodes</span>
+      </div>
+      <div class="empty-state glass-card" id="recent-empty">
+        <div class="empty-art" aria-hidden="true"><span>♫</span><i></i><b></b></div>
+        <div><h3>Your listening list starts here</h3><p>Generated briefings appear here for this session. Browser speech plays the script but doesn’t create an audio file.</p></div>
+        <a class="text-link" href="#podcast">Explore the studio <span aria-hidden="true">↗</span></a>
+      </div>
+      <div class="recent-list" id="recent-list" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="about">
+    <div class="footer-main section-wrap">
+      <div class="footer-brand-block">
+        <a class="brand footer-brand" href="#overview" aria-label="WeatherCast home"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 36 36" fill="none"><path d="M10.7 23.7a6.1 6.1 0 0 1-.1-12.2 8.3 8.3 0 0 1 15.7 2.2 5.1 5.1 0 0 1-.1 10H10.7Z" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><path d="m15.2 27.1-1.1 2.2m7.8-2.2-1.1 2.2" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><path d="M23.2 7.3V4.8m5.7 4.1 1.8-1.8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span><span>weather<span class="brand-light">cast</span></span></a>
+        <p>A little more clarity for the day ahead. WeatherCast makes the forecast feel a little more like yours.</p>
+      </div>
+      <div class="footer-links"><h2>Explore</h2><a href="#overview">Overview</a><a href="#forecast">Forecast</a><a href="#podcast">Weather podcast</a></div>
+      <div class="footer-links"><h2>About</h2><a href="#about">Our approach</a><a href="#city-search">Find your city</a><span>Thoughtfully made for your day.</span></div>
+      <div class="footer-attribution"><span class="attribution-icon" aria-hidden="true">◎</span><div><h2>Weather, with transparency</h2><p>Live weather and forecasts are provided by <a href="https://open-meteo.com/" target="_blank" rel="noopener noreferrer">Open-Meteo</a>. Demo data is shown until a city is searched.</p></div></div>
+    </div>
+    <div class="footer-bottom section-wrap"><span>© <span id="footer-year">2026</span> WeatherCast. A clearer forecast starts here.</span><a href="#overview">Back to top ↑</a></div>
+  </footer>
+</body>
+</html>
